@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-basics';
+// for dynamics in the template
+  title = 'Dynamic title'
+  number = 42
+  arr = [1, 2, 3]
+// objects are not supported as they are; angular tries to make it a string
 }
