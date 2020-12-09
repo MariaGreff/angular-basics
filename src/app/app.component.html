@@ -2,8 +2,33 @@
 <p>{{ title }}</p>
 <p>{{ number - 2 }}</p>
 <p>{{ arr }}</p>
+
+<!-- Binding with click: -->
+<button (click)="onClick()">Click me!</button>
+
+<!-- Binding (with []): we connect html with ts -->
+<img [src]="img" alt="logo">
+
+<!-- Binding: ts with html -->
+<input
+  type="text"
+  (keyup.enter)="onInput($event)"
+  (blur)="onBlur(myInput.value)"
+  #myInput
+>
+<p>{{inputValue}}</p>
+
 <hr>
 <app-post></app-post>
-<hr>
 
+<hr>
 <app-post4></app-post4>
+
+<!-- Two way data binding: -->
+<!-- variant 1: -->
+<!-- <input type="text" [value]="title2" (input)="onInput2($event)"> -->
+<!-- variant 2: -->
+<!-- Two way binding with [] and () -->
+<input type="text" [(ngModel)]="title2">
+<p>{{title2}}</p>
+
