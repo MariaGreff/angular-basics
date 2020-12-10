@@ -32,3 +32,31 @@
 <input type="text" [(ngModel)]="title2">
 <p>{{title2}}</p>
 
+<!-- Directive ng-style: -->
+<button (click)="backgroundToggle = !backgroundToggle">Toggle</button>
+<div [ngStyle]="{
+  width: '200px',
+  height: '200px',
+  borderRadius: '5px',
+  border: '1px solid #ccc',
+  background: backgroundToggle ? 'red' : 'blue'
+}" ></div>
+
+<!-- Directive ngClass -->
+<p [ngClass]="{
+  red: backgroundToggle,
+  blue: !backgroundToggle
+}">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, nihil.</p>
+
+<p
+  [class.blue]="!backgroundToggle"
+  [class.red]="backgroundToggle"
+>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, minus.</p>
+
+<!-- Directive ngIf else -->
+<button (click)="toggle = !toggle">Toggle</button>
+<p class="red">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, minus.</p>
+
+<p class="blue">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, minus.</p>
+
+

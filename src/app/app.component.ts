@@ -25,7 +25,7 @@ export class AppComponent {
     }, 5000)
   }
 
-  onInput (event: KeyboardEvent) {
+  onInput (event: any) {
     this.inputValue = (<HTMLInputElement>event.target).value;
   }
 
@@ -40,4 +40,8 @@ export class AppComponent {
   onInput2(event: any) {
     this.title2 = event.target.value;
   }
+
+  backgroundToggle = false;
+
+  toggle = false;
 }
