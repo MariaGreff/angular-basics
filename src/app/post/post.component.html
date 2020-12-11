@@ -1,4 +1,7 @@
 <div class="card">
   <h2>{{post.title}}</h2>
   <p>{{post.text}}</p>
+  <button class="btn" (click)="removePost()">&times;</button>
+<!-- for rendering outer data: -->
+  <ng-content></ng-content>
 </div>
