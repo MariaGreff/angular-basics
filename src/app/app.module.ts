@@ -7,6 +7,7 @@ import { Post2Component } from './post2/post2.component';
 import { Post3Component } from './post3/post3.component';
 import { Post4Component } from './post4/post4.compontent';
 import { FormsModule } from '@angular/forms';
+import { PlaygroundComponent } from './playground/playground.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     PostComponent,
     Post2Component,
     Post3Component,
-    Post4Component
+    Post4Component,
+    PlaygroundComponent
   ],
   imports: [
     BrowserModule,
