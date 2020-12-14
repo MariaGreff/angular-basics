@@ -1,5 +1,5 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, Component, ContentChild, DoCheck, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChange, ViewEncapsulation } from '@angular/core';
-import { Post } from '../app.component';
+import { Post } from '../components-playground/components-playground.component';
 
 @Component({
   selector: 'app-post',

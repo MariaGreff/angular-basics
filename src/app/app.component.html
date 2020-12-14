@@ -1,20 +1,10 @@
-<button (click)="showPlayground = !showPlayground">Click me!</button>
+<button (click)="showPlayground = !showPlayground">Show basic playground</button>
 <playground *ngIf="showPlayground"></playground>
-<div class="container">
-  <h1>Angular Components</h1>
-  <app-post-form
-    (onAdd)="updatePosts($event)"
-  ></app-post-form>
-  <hr />
-  <app-post
-    *ngFor="let p of posts"
-    [post]="p"
-    (onRemove)="removePost($event)"
-  >
-  <div #info>
-  <small *ngIf="p.text.length > 10; else short">This post is long</small>
-  <ng-template #short><small>This post is short</small></ng-template>
-  </div>
-</app-post>
 
-</div>
+<button (click)="showComponentsPlayground = !showComponentsPlayground">Show components playground</button>
+<app-components-playground *ngIf="showComponentsPlayground"></app-components-playground>
+
+<button (click)="showDirectivesPlayground = !showDirectivesPlayground">Show directives playground</button>
+<app-directives-playground *ngIf="showDirectivesPlayground"></app-directives-playground>
+
+
